@@ -1,0 +1,29 @@
+[WebServer] Server listening on http://127.0.0.1:3000
+
+Running 23 tests using 1 worker
+
+  ok  1 [chromium] › tests\checkout.spec.ts:19:1 › TC-01: Successful checkout shows a confirmation (538ms)
+  ok  2 [chromium] › tests\checkout.spec.ts:67:1 › TC-02: Missing name blocks checkout and preserves the cart (544ms)
+  ok  3 [chromium] › tests\checkout.spec.ts:107:1 › TC-03: Quantity calculation updates exact totals (410ms)
+  ok  4 [chromium] › tests\exploratory.spec.ts:34:1 › TC-04: Empty cart blocks checkout and preserves typed name (348ms)
+  ok  5 [chromium] › tests\exploratory.spec.ts:61:1 › TC-05: Whitespace-only name is blocked with aria-invalid (350ms)
+  ok  6 [chromium] › tests\exploratory.spec.ts:75:1 › TC-06: Removing a product removes its line and updates order total (431ms)
+  ok  7 [chromium] › tests\exploratory.spec.ts:89:1 › TC-07: Quantity minimum clamps to 1 and minus button is disabled (448ms)
+  ok  8 [chromium] › tests\exploratory.spec.ts:125:1 › TC-08: Quantity maximum at 99 disables plus button and displays notice (571ms)
+  ok  9 [chromium] › tests\exploratory.spec.ts:155:1 › TC-09a: Rapid evaluate-clicks produce exactly one confirmation and reference (515ms)
+  ok 10 [chromium] › tests\exploratory.spec.ts:195:1 › TC-09b: Real mouse double-click at button coordinates produces single confirmation (415ms)
+  ok 11 [chromium] › tests\exploratory.spec.ts:220:1 › TC-09c: Repeated Enter on live name input produces exactly one confirmation (434ms)
+  ok 12 [chromium] › tests\exploratory.spec.ts:245:1 › TC-09d: Submission guard holds after success against subsequent clicks and Enter (634ms)
+  ok 13 [chromium] › tests\exploratory.spec.ts:273:1 › TC-10: Start new order resets cart, name, errors, and confirmation (566ms)
+  ok 14 [chromium] › tests\exploratory.spec.ts:299:1 › TC-11: Second order succeeds with a distinct reference (632ms)
+  ok 15 [chromium] › tests\exploratory.spec.ts:326:1 › TC-12: Totals calculate accurately through additions and removals (584ms)
+  ok 16 [chromium] › tests\exploratory.spec.ts:347:1 › TC-13: Name maxlength enforced and user input rendered safely (464ms)
+  ok 17 [chromium] › tests\exploratory.spec.ts:367:1 › TC-14: Zero console errors or page errors across a full customer journey (722ms)
+  ok 18 [chromium] › tests\exploratory.spec.ts:402:1 › TC-15: D-02 Regression - quantity edit without Tab immediately registers button clicks (529ms)
+  ok 19 [chromium] › tests\server.spec.ts:15:1 › TC-16: Public page is served with the correct type and nosniff (59ms)
+  ok 20 [chromium] › tests\server.spec.ts:25:1 › TC-17: Server source and unknown files are not exposed (S-01) (42ms)
+  ok 21 [chromium] › tests\server.spec.ts:33:1 › TC-18: Methods other than GET and HEAD return 405 with Allow (S-02) (41ms)
+  ok 22 [chromium] › tests\server.spec.ts:41:1 › TC-19: HEAD returns headers and no body (S-02) (20ms)
+  ok 23 [chromium] › tests\server.spec.ts:48:1 › TC-20: Malformed encoding and null bytes return 400 and the server survives (S-03) (33ms)
+
+  23 passed (11.3s)

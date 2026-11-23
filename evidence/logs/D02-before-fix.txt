@@ -1,0 +1,13 @@
+﻿=== DEFECT D-02 REPRODUCTION: Swallowed Click on Quantity Edit ===
+Date: 2026-11-23T12:12:29+05:30
+Test Scenario: Edit quantity to 5 without pressing Tab, then click '+' (Increase quantity) or Remove immediately.
+Expected:
+  - After fill('5') and clicking '+', quantity becomes 6 and line total becomes $27.00.
+  - After fill('5') and clicking Remove, product line is removed (count 0).
+Observed (Before Fix):
+  - fill('5') triggered focusout when clicking '+'.
+  - focusout event handler called render(), which executed linesEl.replaceChildren(), destroying the existing DOM button elements during the mousedown/click cycle.
+  - The browser click event was swallowed/lost because the target button was disconnected from DOM.
+  - Observed Quantity: 5 (Expected: 6)
+  - Observed Line Total: $22.50 (Expected: $27.00)
+  - Status: DEFECT REPRODUCED

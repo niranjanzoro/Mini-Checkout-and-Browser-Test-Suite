@@ -1,0 +1,294 @@
+﻿[WebServer] Server listening on http://127.0.0.1:3000
+
+Running 16 tests using 1 worker
+
+  x   1 [chromium] › tests\checkout.spec.ts:16:1 › successful checkout shows a confirmation (5.5s)
+  x   2 [chromium] › tests\checkout.spec.ts:46:1 › missing name blocks checkout and preserves the cart (5.6s)
+  ok  3 [chromium] › tests\checkout.spec.ts:77:1 › quantity change updates exact totals (548ms)
+  ok  4 [chromium] › tests\exploratory.spec.ts:43:1 › M1-A: empty cart AND blank name → cart error shown, name preserved (408ms)
+  ok  5 [chromium] › tests\exploratory.spec.ts:57:1 › M1-B: empty cart with valid name → cart error, name preserved, no confirmation (413ms)
+  x   6 [chromium] › tests\exploratory.spec.ts:72:1 › M2-a: rapid evaluate-clicks produce exactly one confirmation and reference (5.4s)
+  x   7 [chromium] › tests\exploratory.spec.ts:94:1 › M2-b: dblclick on place-order produces exactly one confirmation (5.5s)
+  x   8 [chromium] › tests\exploratory.spec.ts:110:1 › M2-c: repeated Enter presses in name field produce exactly one confirmation (5.5s)
+  ok  9 [chromium] › tests\exploratory.spec.ts:128:1 › whitespace-only name is treated as blank (403ms)
+  ok 10 [chromium] › tests\exploratory.spec.ts:143:1 › name error and aria-invalid clear as soon as a valid name is typed (422ms)
+  ok 11 [chromium] › tests\exploratory.spec.ts:162:1 › cart error clears when an item is added (377ms)
+  x  12 [chromium] › tests\exploratory.spec.ts:175:1 › failed validation does not lock the guard — customer can retry (5.6s)
+  ok 13 [chromium] › tests\exploratory.spec.ts:194:1 › minus button stops at qty 1 and never removes the line (597ms)
+  ok 14 [chromium] › tests\exploratory.spec.ts:213:1 › qty clamps to 1 for 0, negative, blank, decimal, non-numeric inputs (387ms)
+  ok 15 [chromium] › tests\exploratory.spec.ts:241:1 › qty 200 clamps to 99 — total is $445.50 (473ms)
+  x  16 [chromium] › tests\exploratory.spec.ts:256:1 › start new order resets all state; a second order then succeeds (5.5s)
+
+
+  1) [chromium] › tests\checkout.spec.ts:16:1 › successful checkout shows a confirmation ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('confirmation')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+
+
+      34 |   // Confirmation view must appear
+      35 |   const confirmation = page.getByTestId('confirmation');
+    > 36 |   await expect(confirmation).toBeVisible();
+         |                              ^
+      37 |
+      38 |   // Reference must match ORD- + exactly 6 uppercase alphanumerics
+      39 |   await expect(page.getByTestId('order-reference')).toHaveText(/^ORD-[A-Z0-9]{6}$/);
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\checkout.spec.ts:36:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\checkout-successful-checkout-shows-a-confirmation-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\checkout-successful-checkout-shows-a-confirmation-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\checkout-successful-checkout-shows-a-confirmation-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\checkout-successful-checkout-shows-a-confirmation-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\checkout.spec.ts:46:1 › missing name blocks checkout and preserves the cart 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('confirmation')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+
+
+      71 |
+      72 |   // Confirmation must now appear (proves guard did not lock on failure)
+    > 73 |   await expect(page.getByTestId('confirmation')).toBeVisible();
+         |                                                  ^
+      74 | });
+      75 |
+      76 | // ── Test 3 ───────────────────────────────────────────────────────────────────
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\checkout.spec.ts:73:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\checkout-missing-name-blocks-checkout-and-preserves-the-cart-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\checkout-missing-name-blocks-checkout-and-preserves-the-cart-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\checkout-missing-name-blocks-checkout-and-preserves-the-cart-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\checkout-missing-name-blocks-checkout-and-preserves-the-cart-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\exploratory.spec.ts:72:1 › M2-a: rapid evaluate-clicks produce exactly one confirmation and reference 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('confirmation')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+
+
+      83 |   });
+      84 |
+    > 85 |   await expect(page.getByTestId('confirmation')).toBeVisible();
+         |                                                  ^
+      86 |   await expect(page.getByTestId('confirmation')).toHaveCount(1);
+      87 |   await expect(page.getByTestId('order-reference')).toHaveCount(1);
+      88 |   await expect(page.getByTestId('order-reference')).toHaveText(/^ORD-[A-Z0-9]{6}$/);
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\exploratory.spec.ts:85:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\exploratory-M2-a-rapid-eva-c09c2--confirmation-and-reference-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\exploratory-M2-a-rapid-eva-c09c2--confirmation-and-reference-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\exploratory-M2-a-rapid-eva-c09c2--confirmation-and-reference-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\exploratory-M2-a-rapid-eva-c09c2--confirmation-and-reference-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests\exploratory.spec.ts:94:1 › M2-b: dblclick on place-order produces exactly one confirmation 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('confirmation')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      101 |   await page.getByTestId('place-order').dblclick();
+      102 |
+    > 103 |   await expect(page.getByTestId('confirmation')).toHaveCount(1);
+          |                                                  ^
+      104 |   await expect(page.getByTestId('order-reference')).toHaveCount(1);
+      105 |
+      106 |   await shot(page, 'M2-b-dblclick');
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\exploratory.spec.ts:103:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\exploratory-M2-b-dblclick--13542-es-exactly-one-confirmation-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\exploratory-M2-b-dblclick--13542-es-exactly-one-confirmation-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\exploratory-M2-b-dblclick--13542-es-exactly-one-confirmation-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\exploratory-M2-b-dblclick--13542-es-exactly-one-confirmation-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests\exploratory.spec.ts:110:1 › M2-c: repeated Enter presses in name field produce exactly one confirmation 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('confirmation')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      119 |   await page.getByTestId('name-input').press('Enter');
+      120 |
+    > 121 |   await expect(page.getByTestId('confirmation')).toHaveCount(1);
+          |                                                  ^
+      122 |   await expect(page.getByTestId('order-reference')).toHaveCount(1);
+      123 |
+      124 |   await shot(page, 'M2-c-repeated-enter');
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\exploratory.spec.ts:121:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\exploratory-M2-c-repeated--c750f-ce-exactly-one-confirmation-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\exploratory-M2-c-repeated--c750f-ce-exactly-one-confirmation-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\exploratory-M2-c-repeated--c750f-ce-exactly-one-confirmation-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\exploratory-M2-c-repeated--c750f-ce-exactly-one-confirmation-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › tests\exploratory.spec.ts:175:1 › failed validation does not lock the guard — customer can retry 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('confirmation')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+
+
+      186 |   await page.getByTestId('place-order').click();
+      187 |
+    > 188 |   await expect(page.getByTestId('confirmation')).toBeVisible();
+          |                                                  ^
+      189 |
+      190 |   await shot(page, 'extra-guard-not-locked');
+      191 | });
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\exploratory.spec.ts:188:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\exploratory-failed-validat-ac7cc--guard-—-customer-can-retry-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\exploratory-failed-validat-ac7cc--guard-—-customer-can-retry-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\exploratory-failed-validat-ac7cc--guard-—-customer-can-retry-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\exploratory-failed-validat-ac7cc--guard-—-customer-can-retry-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › tests\exploratory.spec.ts:256:1 › start new order resets all state; a second order then succeeds 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('confirmation')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('confirmation') with timeout 5000ms
+      - waiting for getByTestId('confirmation')
+
+
+      261 |   await page.getByTestId('name-input').fill('Heidi');
+      262 |   await page.getByTestId('place-order').click();
+    > 263 |   await expect(page.getByTestId('confirmation')).toBeVisible();
+          |                                                  ^
+      264 |
+      265 |   // Reset
+      266 |   await page.getByTestId('new-order').click();
+        at D:\Mini Checkout and Browser Test Suite\mini-checkout\tests\exploratory.spec.ts:263:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\exploratory-start-new-orde-b5dd3--second-order-then-succeeds-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\exploratory-start-new-orde-b5dd3--second-order-then-succeeds-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\exploratory-start-new-orde-b5dd3--second-order-then-succeeds-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\exploratory-start-new-orde-b5dd3--second-order-then-succeeds-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7 failed
+    [chromium] › tests\checkout.spec.ts:16:1 › successful checkout shows a confirmation ────────────
+    [chromium] › tests\checkout.spec.ts:46:1 › missing name blocks checkout and preserves the cart ─
+    [chromium] › tests\exploratory.spec.ts:72:1 › M2-a: rapid evaluate-clicks produce exactly one confirmation and reference 
+    [chromium] › tests\exploratory.spec.ts:94:1 › M2-b: dblclick on place-order produces exactly one confirmation 
+    [chromium] › tests\exploratory.spec.ts:110:1 › M2-c: repeated Enter presses in name field produce exactly one confirmation 
+    [chromium] › tests\exploratory.spec.ts:175:1 › failed validation does not lock the guard — customer can retry 
+    [chromium] › tests\exploratory.spec.ts:256:1 › start new order resets all state; a second order then succeeds 
+  9 passed (49.6s)

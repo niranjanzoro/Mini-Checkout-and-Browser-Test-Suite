@@ -1,0 +1,16 @@
+{
+  "name": "mini-checkout",
+  "version": "1.0.0",
+  "description": "Single-page checkout in vanilla HTML/CSS/JS with Playwright test suite",
+  "private": true,
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "test:evidence": "node scripts/collect-evidence.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}

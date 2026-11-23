@@ -1,0 +1,37 @@
+# Server probes BEFORE fix (original app/server.js, extracted from the supplied Mini-Checkout.zip)
+# Environment: Linux 6.18.44-fc-v726, Node v22.23.5, curl 8.5.0
+# Generated: 2026-11-23T07:42:21Z
+GET / -> 200|text/html; charset=utf-8
+GET /index.html -> 200|text/html; charset=utf-8
+GET /server.js -> 200|application/javascript; charset=utf-8
+GET /app/server.js -> 404|text/plain
+GET /nope.html -> 404|text/plain
+GET /../package.json -> 403|text/plain
+GET /%2e%2e/package.json -> 404|text/plain
+GET /%E0%A4%A -> 404|text/plain
+GET /%00 -> 404|text/plain
+POST / -> 200|text/html; charset=utf-8
+HEAD / -> 200|0
+GET / after bad requests -> 200
+nosniff header on GET /: 
+Allow header on POST /: 
+HEAD / body bytes: 0
+
+# Server probes AFTER fix (app/server.js)
+# Environment: Linux 6.18.44-fc-v726, Node v22.23.5, curl 8.5.0
+# Generated: 2026-11-23T07:42:16Z
+GET / -> 200|text/html; charset=utf-8
+GET /index.html -> 200|text/html; charset=utf-8
+GET /server.js -> 404|text/plain; charset=utf-8
+GET /app/server.js -> 404|text/plain; charset=utf-8
+GET /nope.html -> 404|text/plain; charset=utf-8
+GET /../package.json -> 403|text/plain; charset=utf-8
+GET /%2e%2e/package.json -> 403|text/plain; charset=utf-8
+GET /%E0%A4%A -> 400|text/plain; charset=utf-8
+GET /%00 -> 400|text/plain; charset=utf-8
+POST / -> 405|text/plain; charset=utf-8
+HEAD / -> 200|0
+GET / after bad requests -> 200
+nosniff header on GET /: X-Content-Type-Options: nosniff
+Allow header on POST /: Allow: GET, HEAD
+HEAD / body bytes: 0

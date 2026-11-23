@@ -1,0 +1,447 @@
+# Full-suite attempt in the audit sandbox (Linux, Node v22.23.5). Chromium could not be downloaded, so the 18 browser tests could not launch.
+# This is NOT a test result for the application. Browser tests are NOT TESTED in this environment.
+[WebServer] Server listening on http://127.0.0.1:3000
+
+Running 23 tests using 1 worker
+
+  ✘   1 [chromium] › tests/checkout.spec.ts:19:1 › TC-01: Successful checkout shows a confirmation (2ms)
+  ✘   2 [chromium] › tests/checkout.spec.ts:67:1 › TC-02: Missing name blocks checkout and preserves the cart (4ms)
+  ✘   3 [chromium] › tests/checkout.spec.ts:107:1 › TC-03: Quantity calculation updates exact totals (3ms)
+  ✘   4 [chromium] › tests/exploratory.spec.ts:34:1 › TC-04: Empty cart blocks checkout and preserves typed name (2ms)
+  ✘   5 [chromium] › tests/exploratory.spec.ts:61:1 › TC-05: Whitespace-only name is blocked with aria-invalid (2ms)
+  ✘   6 [chromium] › tests/exploratory.spec.ts:75:1 › TC-06: Removing a product removes its line and updates order total (3ms)
+  ✘   7 [chromium] › tests/exploratory.spec.ts:89:1 › TC-07: Quantity minimum clamps to 1 and minus button is disabled (3ms)
+  ✘   8 [chromium] › tests/exploratory.spec.ts:125:1 › TC-08: Quantity maximum at 99 disables plus button and displays notice (3ms)
+  ✘   9 [chromium] › tests/exploratory.spec.ts:155:1 › TC-09a: Rapid evaluate-clicks produce exactly one confirmation and reference (4ms)
+  ✘  10 [chromium] › tests/exploratory.spec.ts:195:1 › TC-09b: Real mouse double-click at button coordinates produces single confirmation (2ms)
+  ✘  11 [chromium] › tests/exploratory.spec.ts:220:1 › TC-09c: Repeated Enter on live name input produces exactly one confirmation (3ms)
+  ✘  12 [chromium] › tests/exploratory.spec.ts:245:1 › TC-09d: Submission guard holds after success against subsequent clicks and Enter (2ms)
+  ✘  13 [chromium] › tests/exploratory.spec.ts:273:1 › TC-10: Start new order resets cart, name, errors, and confirmation (3ms)
+  ✘  14 [chromium] › tests/exploratory.spec.ts:299:1 › TC-11: Second order succeeds with a distinct reference (2ms)
+  ✘  15 [chromium] › tests/exploratory.spec.ts:326:1 › TC-12: Totals calculate accurately through additions and removals (4ms)
+  ✘  16 [chromium] › tests/exploratory.spec.ts:347:1 › TC-13: Name maxlength enforced and user input rendered safely (6ms)
+  ✘  17 [chromium] › tests/exploratory.spec.ts:367:1 › TC-14: Zero console errors or page errors across a full customer journey (2ms)
+  ✘  18 [chromium] › tests/exploratory.spec.ts:402:1 › TC-15: D-02 Regression - quantity edit without Tab immediately registers button clicks (5ms)
+  ✓  19 [chromium] › tests/server.spec.ts:15:1 › TC-16: Public page is served with the correct type and nosniff (57ms)
+  ✓  20 [chromium] › tests/server.spec.ts:25:1 › TC-17: Server source and unknown files are not exposed (S-01) (47ms)
+  ✓  21 [chromium] › tests/server.spec.ts:33:1 › TC-18: Methods other than GET and HEAD return 405 with Allow (S-02) (43ms)
+  ✓  22 [chromium] › tests/server.spec.ts:41:1 › TC-19: HEAD returns headers and no body (S-02) (18ms)
+  ✓  23 [chromium] › tests/server.spec.ts:48:1 › TC-20: Malformed encoding and null bytes return 400 and the server survives (S-03) (34ms)
+
+
+  1) [chromium] › tests/checkout.spec.ts:19:1 › TC-01: Successful checkout shows a confirmation ────
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/checkout-TC-01-Successful-checkout-shows-a-confirmation-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/checkout-TC-01-Successful-checkout-shows-a-confirmation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/checkout-TC-01-Successful-checkout-shows-a-confirmation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/checkout.spec.ts:67:1 › TC-02: Missing name blocks checkout and preserves the cart 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/checkout-TC-02-Missing-nam-7dd02-kout-and-preserves-the-cart-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/checkout-TC-02-Missing-nam-7dd02-kout-and-preserves-the-cart-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/checkout-TC-02-Missing-nam-7dd02-kout-and-preserves-the-cart-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/checkout.spec.ts:107:1 › TC-03: Quantity calculation updates exact totals ──
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/checkout-TC-03-Quantity-calculation-updates-exact-totals-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/checkout-TC-03-Quantity-calculation-updates-exact-totals-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/checkout-TC-03-Quantity-calculation-updates-exact-totals-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests/exploratory.spec.ts:34:1 › TC-04: Empty cart blocks checkout and preserves typed name 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-04-Empty-ca-0a3ac-ut-and-preserves-typed-name-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-04-Empty-ca-0a3ac-ut-and-preserves-typed-name-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-04-Empty-ca-0a3ac-ut-and-preserves-typed-name-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests/exploratory.spec.ts:61:1 › TC-05: Whitespace-only name is blocked with aria-invalid 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-05-Whitespa-4e88b-s-blocked-with-aria-invalid-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-05-Whitespa-4e88b-s-blocked-with-aria-invalid-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-05-Whitespa-4e88b-s-blocked-with-aria-invalid-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › tests/exploratory.spec.ts:75:1 › TC-06: Removing a product removes its line and updates order total 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-06-Removing-32010-ine-and-updates-order-total-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-06-Removing-32010-ine-and-updates-order-total-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-06-Removing-32010-ine-and-updates-order-total-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › tests/exploratory.spec.ts:89:1 › TC-07: Quantity minimum clamps to 1 and minus button is disabled 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-07-Quantity-ce3bc-nd-minus-button-is-disabled-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-07-Quantity-ce3bc-nd-minus-button-is-disabled-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-07-Quantity-ce3bc-nd-minus-button-is-disabled-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › tests/exploratory.spec.ts:125:1 › TC-08: Quantity maximum at 99 disables plus button and displays notice 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-08-Quantity-52ad8--button-and-displays-notice-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-08-Quantity-52ad8--button-and-displays-notice-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-08-Quantity-52ad8--button-and-displays-notice-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › tests/exploratory.spec.ts:155:1 › TC-09a: Rapid evaluate-clicks produce exactly one confirmation and reference 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-09a-Rapid-e-851cf--confirmation-and-reference-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-09a-Rapid-e-851cf--confirmation-and-reference-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-09a-Rapid-e-851cf--confirmation-and-reference-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › tests/exploratory.spec.ts:195:1 › TC-09b: Real mouse double-click at button coordinates produces single confirmation 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-09b-Real-mo-397a9-roduces-single-confirmation-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-09b-Real-mo-397a9-roduces-single-confirmation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-09b-Real-mo-397a9-roduces-single-confirmation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › tests/exploratory.spec.ts:220:1 › TC-09c: Repeated Enter on live name input produces exactly one confirmation 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-09c-Repeate-f427d-es-exactly-one-confirmation-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-09c-Repeate-f427d-es-exactly-one-confirmation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-09c-Repeate-f427d-es-exactly-one-confirmation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › tests/exploratory.spec.ts:245:1 › TC-09d: Submission guard holds after success against subsequent clicks and Enter 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-09d-Submiss-64c30-subsequent-clicks-and-Enter-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-09d-Submiss-64c30-subsequent-clicks-and-Enter-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-09d-Submiss-64c30-subsequent-clicks-and-Enter-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium] › tests/exploratory.spec.ts:273:1 › TC-10: Start new order resets cart, name, errors, and confirmation 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-10-Start-ne-e520c-ame-errors-and-confirmation-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-10-Start-ne-e520c-ame-errors-and-confirmation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-10-Start-ne-e520c-ame-errors-and-confirmation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium] › tests/exploratory.spec.ts:299:1 › TC-11: Second order succeeds with a distinct reference 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-11-Second-o-ffad9-s-with-a-distinct-reference-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-11-Second-o-ffad9-s-with-a-distinct-reference-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-11-Second-o-ffad9-s-with-a-distinct-reference-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [chromium] › tests/exploratory.spec.ts:326:1 › TC-12: Totals calculate accurately through additions and removals 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-12-Totals-c-5d459-ough-additions-and-removals-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-12-Totals-c-5d459-ough-additions-and-removals-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-12-Totals-c-5d459-ough-additions-and-removals-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [chromium] › tests/exploratory.spec.ts:347:1 › TC-13: Name maxlength enforced and user input rendered safely 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-13-Name-max-b0129--user-input-rendered-safely-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-13-Name-max-b0129--user-input-rendered-safely-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-13-Name-max-b0129--user-input-rendered-safely-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [chromium] › tests/exploratory.spec.ts:367:1 › TC-14: Zero console errors or page errors across a full customer journey 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-14-Zero-con-0b4b2-oss-a-full-customer-journey-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-14-Zero-con-0b4b2-oss-a-full-customer-journey-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-14-Zero-con-0b4b2-oss-a-full-customer-journey-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [chromium] › tests/exploratory.spec.ts:402:1 › TC-15: D-02 Regression - quantity edit without Tab immediately registers button clicks 
+
+    Error: browserType.launch: Executable doesn't exist at /opt/pw-browsers/chromium_headless_shell-1255/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/exploratory-TC-15-D-02-Reg-1a029-ely-registers-button-clicks-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/exploratory-TC-15-D-02-Reg-1a029-ely-registers-button-clicks-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/exploratory-TC-15-D-02-Reg-1a029-ely-registers-button-clicks-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18 failed
+    [chromium] › tests/checkout.spec.ts:19:1 › TC-01: Successful checkout shows a confirmation ─────
+    [chromium] › tests/checkout.spec.ts:67:1 › TC-02: Missing name blocks checkout and preserves the cart 
+    [chromium] › tests/checkout.spec.ts:107:1 › TC-03: Quantity calculation updates exact totals ───
+    [chromium] › tests/exploratory.spec.ts:34:1 › TC-04: Empty cart blocks checkout and preserves typed name 
+    [chromium] › tests/exploratory.spec.ts:61:1 › TC-05: Whitespace-only name is blocked with aria-invalid 
+    [chromium] › tests/exploratory.spec.ts:75:1 › TC-06: Removing a product removes its line and updates order total 
+    [chromium] › tests/exploratory.spec.ts:89:1 › TC-07: Quantity minimum clamps to 1 and minus button is disabled 
+    [chromium] › tests/exploratory.spec.ts:125:1 › TC-08: Quantity maximum at 99 disables plus button and displays notice 
+    [chromium] › tests/exploratory.spec.ts:155:1 › TC-09a: Rapid evaluate-clicks produce exactly one confirmation and reference 
+    [chromium] › tests/exploratory.spec.ts:195:1 › TC-09b: Real mouse double-click at button coordinates produces single confirmation 
+    [chromium] › tests/exploratory.spec.ts:220:1 › TC-09c: Repeated Enter on live name input produces exactly one confirmation 
+    [chromium] › tests/exploratory.spec.ts:245:1 › TC-09d: Submission guard holds after success against subsequent clicks and Enter 
+    [chromium] › tests/exploratory.spec.ts:273:1 › TC-10: Start new order resets cart, name, errors, and confirmation 
+    [chromium] › tests/exploratory.spec.ts:299:1 › TC-11: Second order succeeds with a distinct reference 
+    [chromium] › tests/exploratory.spec.ts:326:1 › TC-12: Totals calculate accurately through additions and removals 
+    [chromium] › tests/exploratory.spec.ts:347:1 › TC-13: Name maxlength enforced and user input rendered safely 
+    [chromium] › tests/exploratory.spec.ts:367:1 › TC-14: Zero console errors or page errors across a full customer journey 
+    [chromium] › tests/exploratory.spec.ts:402:1 › TC-15: D-02 Regression - quantity edit without Tab immediately registers button clicks 
+  5 passed (11.1s)
